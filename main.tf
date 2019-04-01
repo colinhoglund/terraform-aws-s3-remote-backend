@@ -21,6 +21,8 @@ resource "aws_s3_bucket" "tfstate" {
       }
     }
   }
+
+  tags = "${var.tags}"
 }
 
 resource "aws_dynamodb_table" "tfstate" {
@@ -37,4 +39,6 @@ resource "aws_dynamodb_table" "tfstate" {
   server_side_encryption {
     enabled = true
   }
+
+  tags = "${var.tags}"
 }

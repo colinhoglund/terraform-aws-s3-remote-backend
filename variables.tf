@@ -1,7 +1,9 @@
 variable "read_capacity" {
-  default = 5
+  description = "The number of read units for the DynamoDB table."
+  default     = 5
 }
 
 variable "write_capacity" {
-  default = 5
+  description = "The number of write units for the DynamoDB table."
+  default     = 5
 }
